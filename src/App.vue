@@ -51,6 +51,7 @@
               <!-- <create-contract v-if="isCurrent['create_contract']"></create-contract> -->
               <!-- <send-to-contract v-if="isCurrent['send_to_contract']"></send-to-contract> -->
               <!-- <call-contract v-if="isCurrent['call_contract']"></call-contract> -->
+              <readme v-if="isCurrent['readme']"></readme>
               <config v-if="isCurrent['settings']"></config>
             </v-flex>
           </v-layout>
@@ -86,6 +87,7 @@ import CreateToken from 'controllers/CreateToken'
 import CreateContract from 'controllers/CreateContract'
 import SendToContract from 'controllers/SendToContract.vue'
 import CallContract from 'controllers/CallContract.vue'
+import Readme from 'controllers/Readme.vue'
 import Config from 'controllers/Config'
 
 import config from 'libs/config'
@@ -103,7 +105,7 @@ export default {
   data() {
     return {
       wallet: false,
-      current: 'create',
+      current: 'readme',
       network: config.getNetwork(),
       mode: config.getMode(),
       log: log,
@@ -127,7 +129,9 @@ export default {
         // { icon: 'gavel', name: 'create_contract' },
         // { icon: 'publish', name: 'send_to_contract' },
         // { icon: 'play_circle_filled', name: 'call_contract' },
+        { icon: 'settings', name: 'readme' },
         { divider: true, name: 'disc' },
+
         { icon: 'settings', name: 'settings' },
       ],
       notifyList: {}
@@ -178,6 +182,7 @@ export default {
     CreateContract,
     SendToContract,
     CallContract,
+    Readme,
     Config,
   },
   methods: {

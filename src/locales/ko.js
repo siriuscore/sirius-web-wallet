@@ -25,6 +25,7 @@ export default {
       // create_contract: '컨트랙트 생성',
       // send_to_contract: '컨트랙트 보내기',
       // call_contract: '콜 컨트랙트',
+      readme: 'Readme',
       settings: '설정',
     },
     info: {

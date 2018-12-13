@@ -26,6 +26,7 @@ export default {
       // create_contract: '创建智能合约',
       // send_to_contract: '向智能合约发送数据',
       // call_contract: '调用智能合约',
+      readme: 'Readme',
       settings: '设置',
     },
     info: {
